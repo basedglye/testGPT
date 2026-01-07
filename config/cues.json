@@ -1,0 +1,42 @@
+{
+  "settings": {
+    "host": "127.0.0.1",
+    "port": 9900,
+    "overlay_title": "UE5 Accessibility Cues",
+    "transparency": 0.9,
+    "cue_history_size": 6,
+    "ue_log_path": "",
+    "ue_log_prefix": "ACCESSIBILITY_CUE",
+    "ue_log_poll_interval_ms": 250
+  },
+  "cues": [
+    {
+      "event": "footsteps_nearby",
+      "label": "Footsteps Nearby",
+      "color": "#60A5FA",
+      "severity": "info",
+      "duration_ms": 2200
+    },
+    {
+      "event": "door_open",
+      "label": "Door Opened",
+      "color": "#A3E635",
+      "severity": "info",
+      "duration_ms": 2000
+    },
+    {
+      "event": "enemy_alert",
+      "label": "Enemy Alert",
+      "color": "#F97316",
+      "severity": "warning",
+      "duration_ms": 3000
+    },
+    {
+      "event": "critical_damage",
+      "label": "Critical Damage",
+      "color": "#F43F5E",
+      "severity": "critical",
+      "duration_ms": 3200
+    }
+  ]
+}
