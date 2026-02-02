@@ -1,0 +1,16 @@
+{
+  "name": "Michelle's Lookalike Tracker",
+  "short_name": "Michelle Tags",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f3ff",
+  "theme_color": "#6b4eff",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

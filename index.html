@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#6b4eff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Michelle Tags" />
+    <title>Michelle's Celebrity Lookalike Tracker</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Daily check-in</p>
+        <h1>Michelle's celebrity lookalike tracker</h1>
+        <p class="subhead">
+          Log every time someone says she looks or sounds like Taylor Swift, Scarlett Johansson,
+          or Miley Cyrus — and capture where it happened.
+        </p>
+      </div>
+      <div class="hero-card">
+        <h2>Quick add</h2>
+        <form id="tag-form">
+          <label>
+            Who did they say she looked/sounded like?
+            <select id="celebrity" required>
+              <option value="Taylor Swift">Taylor Swift</option>
+              <option value="Scarlett Johansson">Scarlett Johansson</option>
+              <option value="Miley Cyrus">Miley Cyrus</option>
+            </select>
+          </label>
+          <label>
+            Location
+            <input
+              id="location"
+              type="text"
+              placeholder="e.g., coffee shop, office"
+              autocomplete="off"
+              enterkeyhint="done"
+              required
+            />
+          </label>
+          <label>
+            Notes (optional)
+            <input
+              id="notes"
+              type="text"
+              placeholder="Add context"
+              autocomplete="off"
+              enterkeyhint="done"
+            />
+          </label>
+          <button type="submit">Tag it</button>
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary">
+        <h2>Totals</h2>
+        <div class="summary-grid" id="summary-grid"></div>
+      </section>
+
+      <section class="share">
+        <div>
+          <h2>Share this tracker</h2>
+          <p class="share-text">
+            Send this link to your girlfriend so she can open the tracker on her phone.
+          </p>
+          <p class="share-link" id="share-link"></p>
+          <p class="share-hint" id="share-hint"></p>
+        </div>
+        <div class="share-actions">
+          <button id="share-button" type="button">Share link</button>
+          <p class="share-status" id="share-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="log">
+        <div class="log-header">
+          <h2>Recent tags</h2>
+          <button id="reset">Clear all</button>
+        </div>
+        <div class="log-list" id="log-list"></div>
+      </section>
+    </main>
+
+    <template id="summary-card-template">
+      <div class="summary-card">
+        <p class="summary-name"></p>
+        <p class="summary-count"></p>
+      </div>
+    </template>
+
+    <template id="log-item-template">
+      <article class="log-item">
+        <div>
+          <h3 class="log-celebrity"></h3>
+          <p class="log-location"></p>
+          <p class="log-notes"></p>
+        </div>
+        <time class="log-time"></time>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
